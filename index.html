@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pdf Exporter | Online pdf export</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="wrapper" id="my-section">
+        <div id="ticket">
+            <div id="paper">
+                <div id="pattern">
+                    <div id="content" contenteditable="true">
+                        <input type="text" placeholder="Add a title.. " name="" id="">
+                        Your Paragraph will go here.....
+                    </div>
+                </div>
+                <p style="font-family: 'Euclid Circular'; text-align: center; font-size: x-small;" id="date"></p>
+            </div>
+        </div>
+    </div>
+    <div class="button">
+        <button onclick="createPDF()">Download as PDF</button>
+        <button onclick="window.print()">Print</button>
+    </div>
+    <p style="font-family: 'Euclid Circular'; text-align: center; font-size:medium;">&copy;Sanket Banerjee | All
+        Rights Reserved.</p>
+    <script src="/assets/js/app.js"></script>
+    <script src="/assets/js/html2pdf.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+@media print {
+    body *:not(#my-section):not(#my-section *) {
+        visibility: hidden;
+    }
+
+    #my-section {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+    }
+}
+
+@font-face {
+    font-family: 'Dancing Script';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/assets/fonts/DancingScript-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Century Gothic';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/assets/fonts/GOTHIC.TTF);
+}
+
+@font-face {
+    font-family: 'Euclid Circular';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/assets/fonts/Euclid\ Circular\ A\ Regular.ttf);
+}
+
+
+
+body {
+    background-color: rgba(0, 0, 0, 0);
+
+}
+
+button {
+    font-family: 'Euclid Circular';
+    font-weight: 700;
+}
+
+/* styling paper */
+#paper {
+    width: 600px;
+    height: -webkit-fill-available;
+    min-height: 700px;
+    position: relative;
+    margin: 20px auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: white;
+    box-shadow: 0px 0px 5px 0px #888;
+    font-family: 'Dancing Script';
+}
+
+/* styling red vertical line */
+#paper::before {
+    content: '';
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 40px;
+    background-color: rgba(255, 0, 0, 0.6);
+}
+
+/* styling blue horizontal lines */
+#pattern {
+    height: 100%;
+    min-height: 700px;
+    background-image: repeating-linear-gradient(white 0px, white 24px, teal 25px, teal 25px);
+}
+
+/* styling text content */
+#content {
+    padding-top: 6px;
+    padding-left: 56px;
+    padding-right: 16px;
+    line-height: 25px;
+    font-family: 'Dancing Script';
+    letter-spacing: 0.5px;
+    font-weight: 400;
+    font-size: 19px;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+}
+
+input {
+    outline: none;
+    border: none;
+    font-family: inherit;
+    background: transparent;
+    letter-spacing: 0.5px;
+    width: 100%;
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+@media only screen and (max-width: 1200px) {
+    /*Tablets [601px -> 1200px]*/
+}
+
+@media only screen and (max-width: 600px) {
+    /*Big smartphones [426px -> 600px]*/
+}
+
+@media only screen and (max-width: 425px) {
+
+    /*Small smartphones [325px -> 425px]*/
+    #paper {
+        width: 90%;
+    }
+}
+
+#content:active {
+    border: none;
+    outline: none;
+}
+
+#content::after {
+    border: none;
+    outline: none;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+}
